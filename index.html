@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="aliTech - Criação de sites profissionais em Inácio Martins, PR.">
-    <title>aliTech | Criação de Sites Profissionais</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Criação de Sites Profissionais em Inácio Martins, PR. Sites rápidos, responsivos e otimizados (SEO) para gerar mais vendas para o seu negócio.">
+    <title>aliTech | Criação de Sites Profissionais em Inácio Martins, PR</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* OTIMIZAÇÃO: Fontes importadas no CSS para reduzir requisições no head */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap');
+
         /* --- VARIÁVEIS E RESET --- */
         :root {
             --primary-color: #2563eb; /* Azul Vibrante */
@@ -32,7 +31,7 @@
         h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary-color); }
         ul { list-style: none; }
         a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; }
+        img { max-width: 100%; display: block; height: auto; }
 
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
@@ -47,6 +46,7 @@
             border: none;
             cursor: pointer;
             font-family: 'Poppins', sans-serif;
+            text-align: center;
         }
         .btn:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
         
@@ -55,7 +55,7 @@
             border: 2px solid var(--primary-color);
             color: var(--primary-color);
         }
-        .btn-outline:hover { background-color: var(--primary-color); color: var(--white); }
+        .btn-outline:hover { background-color: var(--primary-color); color: var(--white); transform: translateY(-2px); }
 
         /* --- HEADER --- */
         header {
@@ -74,7 +74,7 @@
         .nav-links { display: flex; gap: 30px; align-items: center; }
         .nav-links a { font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
         .nav-links a:hover { color: var(--primary-color); }
-        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; }
+        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; transition: var(--transition); }
 
         /* --- HERO --- */
         .hero {
@@ -104,64 +104,159 @@
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
         .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { background: var(--white); padding: 40px; border-radius: 12px; transition: var(--transition); border-bottom: 3px solid transparent; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow); border-bottom: 3px solid var(--primary-color); }
+        .service-card { 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 12px; 
+            transition: var(--transition); 
+            border-bottom: 3px solid transparent; 
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-bottom: 3px solid var(--primary-color); }
         .service-icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; }
 
         /* Diferenciais */
         .diferenciais-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .diff-item i { background: rgba(37, 99, 235, 0.1); color: var(--primary-color); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-bottom: 15px; font-size: 1.2rem; }
+        .diff-item i { 
+            background: rgba(37, 99, 235, 0.1); 
+            color: var(--primary-color); 
+            width: 50px; 
+            height: 50px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            margin-bottom: 15px; 
+            font-size: 1.2rem; 
+        }
 
         /* CTA */
         .cta-section { background-color: var(--secondary-color); color: var(--white); text-align: center; padding: 80px 0; }
         .cta-section h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-section .btn:hover {
+            background-color: var(--bg-light) !important;
+            color: var(--primary-dark) !important;
+        }
 
-        /* Contato */
-        .contact-container { display: flex; gap: 50px; }
+        /* Contato (Ajustado para focar nas informações e no botão WhatsApp) */
+        .contact-container { 
+            display: flex; 
+            gap: 50px; 
+            align-items: flex-start; /* Alinha o conteúdo ao topo */
+        }
         .contact-info { flex: 1; }
-        .info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
         .info-item i { font-size: 1.2rem; color: var(--primary-color); }
-        
-        .contact-form { flex: 1.5; background: var(--bg-light); padding: 40px; border-radius: 12px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
-        .form-control { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; }
-        .form-control:focus { outline: 2px solid var(--primary-color); border-color: transparent; }
-        textarea.form-control { resize: vertical; height: 120px; }
+        .info-item h4 { margin: 0; font-weight: 600; font-size: 1rem; }
+        .info-item p { margin: 0; font-size: 0.95rem; }
+
+        .whatsapp-cta-box { 
+            flex: 1.5; 
+            background: var(--bg-light); 
+            padding: 40px; 
+            border-radius: 12px; 
+            text-align: center;
+        }
+        .whatsapp-cta-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        /* Cor verde para o botão de WhatsApp (Melhor UX) */
+        .btn-whatsapp {
+            background-color: #25d366; /* Verde WhatsApp */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e; /* Verde Escuro */
+            transform: translateY(-2px);
+        }
+
 
         /* Footer */
         footer { background-color: #020617; color: #94a3b8; padding: 60px 0 20px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #1e293b; padding-bottom: 40px; }
         .footer-col h4 { color: var(--white); margin-bottom: 20px; }
-        .footer-col ul li { margin-bottom: 10px; }
-        .copyright { text-align: center; font-size: 0.9rem; }
+        .footer-col ul li { margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;}
+        .footer-col ul li i { color: var(--primary-color); }
+        .copyright { text-align: center; font-size: 0.85rem; padding-top: 20px; }
+
+        .social-links { margin-top: 15px; display: flex; gap: 15px; }
+        .social-links a { 
+            font-size: 1.5rem; 
+            color: var(--white); 
+            transition: var(--transition); 
+        }
+        .social-links a:hover { color: var(--primary-color); }
+
 
         /* Responsivo */
         @media (max-width: 992px) {
             .hero-content, .about-content { flex-direction: column; text-align: center; }
             .hero-img, .about-img { order: -1; }
             .hero-text h1 { font-size: 2.5rem; }
+            .about-img img { height: 350px; }
         }
         @media (max-width: 768px) {
-            .nav-links { position: fixed; top: 70px; right: -100%; background: var(--white); width: 100%; flex-direction: column; padding: 30px; box-shadow: 0 10px 10px rgba(0,0,0,0.1); transition: 0.3s; }
+            .nav-links { 
+                position: fixed; 
+                top: 70px; 
+                right: -100%; 
+                background: var(--white); 
+                width: 100%; 
+                flex-direction: column; 
+                padding: 30px; 
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1); 
+                transition: right 0.3s ease-in-out; 
+                z-index: 999;
+                height: 100vh;
+            }
             .nav-links.active { right: 0; }
+            .nav-links li { width: 100%; text-align: center; margin: 10px 0; }
+            .nav-links a.btn { margin-top: 20px; width: 80%; }
             .hamburger { display: block; }
+            .hamburger.active i::before {
+                content: "\f00d";
+            }
             .contact-container { flex-direction: column; }
+            .hero { padding: 120px 0 60px; }
+            .section-padding { padding: 60px 0; }
+            .whatsapp-cta-box { flex: none; width: 100%; }
         }
     </style>
 </head>
 <body>
 
+    <script>
+        const whatsappNumber = "554298633284";
+        const whatsappMessage = encodeURIComponent("Olá, gostaria de solicitar um orçamento para um site profissional. Vi a aliTech no seu site.");
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[data-whatsapp-cta]').forEach(link => {
+                link.setAttribute('href', whatsappLink);
+            });
+        });
+    </script>
+
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">ali<span>Tech</span></a>
-            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+            <a href="#inicio" class="logo">ali<span>Tech</span></a>
+            <div class="hamburger" id="hamburger" aria-label="Abrir menu de navegação"><i class="fas fa-bars"></i></div>
             <nav>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#diferenciais">Diferenciais</a></li>
-                    <li><a href="#contato" class="btn">Solicitar Orçamento</a></li>
+                    <li><a href="#" class="btn" data-whatsapp-cta>Solicitar Orçamento</a></li>
                 </ul>
             </nav>
         </div>
@@ -172,10 +267,10 @@
             <div class="hero-text">
                 <h1>Criação de Sites Profissionais que Geram Resultados</h1>
                 <p>A aliTech desenvolve sites modernos, rápidos e otimizados para empresas de Inácio Martins e região que querem vender mais.</p>
-                <a href="#contato" class="btn">Quero meu site profissional</a>
+                <a href="#" class="btn" data-whatsapp-cta>Quero meu site profissional</a>
             </div>
             <div class="hero-img">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop" alt="Desenvolvimento Web Profissional">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop" alt="Pessoa trabalhando em desenvolvimento web em um notebook">
             </div>
         </div>
     </section>
@@ -183,11 +278,11 @@
     <section class="section-padding" id="sobre">
         <div class="container about-content">
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop" alt="Equipe aliTech trabalhando">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop" alt="Equipe de desenvolvedores em reunião e planejamento">
             </div>
             <div class="about-text">
                 <span class="subtitle">Sobre a aliTech</span>
-                <h2>Transformamos Ideias em Negócios Digitais</h2>
+                <h2>Seu Parceiro de Desenvolvimento Web em Inácio Martins, PR</h2>
                 <p>A aliTech é uma empresa de Inácio Martins - PR com um propósito claro: ajudar empresas a se posicionarem com autoridade na internet.</p>
                 <p>Nosso foco é entregar soluções personalizadas, rápidas e seguras. Combinamos design estratégico com tecnologia de ponta para garantir que seu site trabalhe por você 24 horas por dia.</p>
                 <a href="#servicos" class="btn btn-outline">Conheça nossos serviços</a>
@@ -200,37 +295,38 @@
             <div class="section-header">
                 <span class="subtitle">O que fazemos</span>
                 <h2>Soluções Completas</h2>
+                <p>Nossa expertise em desenvolvimento web garante que você tenha a ferramenta certa para o seu objetivo de negócio.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-desktop"></i></div>
                     <h3>Sites Institucionais</h3>
-                    <p>Apresente sua empresa com credibilidade. Sites planejados para fortalecer sua marca.</p>
+                    <p>Apresente sua empresa com credibilidade. Sites planejados para fortalecer sua marca e autoridade online.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-rocket"></i></div>
                     <h3>Landing Pages</h3>
-                    <p>Páginas de alta conversão focadas em vendas e promoções específicas.</p>
+                    <p>Páginas de alta conversão focadas em vendas, captura de leads e promoções específicas.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-store"></i></div>
-                    <h3>Lojas Virtuais</h3>
-                    <p>E-commerces seguros para você vender seus produtos online.</p>
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-store"></i></div>
+                    <h3>Lojas Virtuais (E-commerce)</h3>
+                    <p>E-commerces seguros e de fácil gerenciamento para você vender seus produtos online 24h por dia.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Sites Responsivos</h3>
-                    <p>Layouts que funcionam em celulares, tablets e computadores.</p>
+                    <p>Layouts que se adaptam perfeitamente a todos os dispositivos: celulares, tablets e computadores.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-search"></i></div>
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-search"></i></div>
                     <h3>Otimização SEO</h3>
-                    <p>Estrutura otimizada para ser encontrado no Google.</p>
+                    <p>Estrutura e conteúdo otimizado para que seu negócio seja encontrado com facilidade no Google.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Manutenção</h3>
-                    <p>Suporte técnico contínuo e atualizações para seu site.</p>
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                    <h3>Manutenção e Suporte</h3>
+                    <p>Suporte técnico contínuo, atualizações de segurança e backups para manter seu site sempre no ar.</p>
                 </div>
             </div>
         </div>
@@ -239,28 +335,29 @@
     <section class="section-padding" id="diferenciais">
         <div class="container">
             <div class="section-header">
+                <span class="subtitle">Nossos Pilares</span>
                 <h2>Por que escolher a aliTech?</h2>
             </div>
             <div class="diferenciais-grid">
                 <div class="diff-item">
-                    <i class="fas fa-paint-brush"></i>
+                    <i class="fas fa-paint-brush" aria-hidden="true"></i>
                     <h4>Design Moderno</h4>
-                    <p>Visual alinhado às tendências.</p>
+                    <p>Visual alinhado às tendências de UX/UI para uma experiência agradável.</p>
                 </div>
                 <div class="diff-item">
-                    <i class="fas fa-bolt"></i>
+                    <i class="fas fa-bolt" aria-hidden="true"></i>
                     <h4>Velocidade</h4>
-                    <p>Sites otimizados para carregar rápido.</p>
+                    <p>Sites otimizados para carregar rápido, melhorando o ranqueamento e a experiência do usuário.</p>
                 </div>
                 <div class="diff-item">
-                    <i class="fas fa-code"></i>
-                    <h4>Código Limpo</h4>
-                    <p>Desenvolvimento profissional.</p>
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <h4>Código Limpo e Seguro</h4>
+                    <p>Desenvolvimento profissional com as melhores práticas de mercado e segurança.</p>
                 </div>
                 <div class="diff-item">
-                    <i class="fas fa-headset"></i>
+                    <i class="fas fa-headset" aria-hidden="true"></i>
                     <h4>Suporte Local</h4>
-                    <p>Atendimento próximo, direto do Paraná.</p>
+                    <p>Atendimento próximo e dedicado, direto de Inácio Martins, para um relacionamento de confiança.</p>
                 </div>
             </div>
         </div>
@@ -269,35 +366,35 @@
     <section class="cta-section">
         <div class="container">
             <h2>Pronto para ter um site profissional?</h2>
-            <p>Não perca mais vendas. Vamos conversar?</p>
-            <a href="#contato" class="btn" style="background-color: var(--white); color: var(--primary-color);">Solicitar Orçamento</a>
+            <p>Não perca mais vendas para a concorrência. Vamos conversar sobre o seu projeto?</p>
+            <a href="#" class="btn" style="background-color: var(--white); color: var(--primary-color);" data-whatsapp-cta>Solicitar Orçamento</a>
         </div>
     </section>
 
     <section class="section-padding" id="contato">
         <div class="container">
             <div class="section-header">
-                <h2>Fale Conosco</h2>
-                <p>Estamos em Inácio Martins, prontos para atender você.</p>
+                <h2>Entre em Contato</h2>
+                <p>Para solicitar um orçamento ou tirar dúvidas, clique no botão do WhatsApp abaixo.</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="info-item">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <div>
                             <h4>E-mail</h4>
                             <p><a href="mailto:alitech.sites.im@gmail.com">alitech.sites.im@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="fab fa-whatsapp"></i>
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         <div>
                             <h4>WhatsApp</h4>
-                            <p><a href="https://wa.me/554298633284" target="_blank">+55 (42) 9863-3284</a></p>
+                            <p><a href="#" data-whatsapp-cta target="_blank">+55 (42) 9863-3284</a></p>
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <div>
                             <h4>Localização</h4>
                             <p>Inácio Martins - PR</p>
@@ -305,28 +402,13 @@
                     </div>
                 </div>
                 
-                <form action="https://formsubmit.co/alitech.sites.im@gmail.com" method="POST" class="contact-form">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    
-                    <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="name" class="form-control" placeholder="Seu nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="seu@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="whatsapp">Telefone / WhatsApp</label>
-                        <input type="tel" id="whatsapp" name="phone" class="form-control" placeholder="(42) 99999-9999" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="message" class="form-control" placeholder="Descreva seu projeto..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%;">Enviar Pedido</button>
-                </form>
+                <div class="whatsapp-cta-box">
+                    <h3>Atendimento Imediato</h3>
+                    <p style="margin-bottom: 25px;">Clique abaixo para iniciar uma conversa no WhatsApp e receber seu orçamento rapidamente.</p>
+                    <a href="#" class="btn btn-whatsapp" data-whatsapp-cta>
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -335,13 +417,18 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="logo" style="color:white; margin-bottom:15px; display:block;">ali<span>Tech</span></a>
-                    <p style="font-size: 0.9rem;">Desenvolvimento de sites profissionais em Inácio Martins e região.</p>
+                    <a href="#inicio" class="logo" style="color:white; margin-bottom:15px; display:block;">ali<span>Tech</span></a>
+                    <p style="font-size: 0.9rem;">Desenvolvimento de sites profissionais em Inácio Martins e região. Foco em velocidade, conversão e SEO.</p>
+
+                    <div class="social-links">
+                        <a href="https://wa.me/554298633284" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/alitech_sites" target="_blank" aria-label="Instagram da aliTech"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Contato</h4>
+                    <h4>Contato Direto</h4>
                     <ul>
-                        <li><i class="fab fa-whatsapp"></i> (42) 9863-3284</li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="#" data-whatsapp-cta target="_blank">(42) 9863-3284</a></li>
                         <li><i class="far fa-envelope"></i> alitech.sites.im@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Inácio Martins, PR</li>
                     </ul>
@@ -351,7 +438,8 @@
                     <ul>
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#contato">Solicitar Orçamento</a></li>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#" data-whatsapp-cta>Solicitar Orçamento</a></li>
                     </ul>
                 </div>
             </div>
@@ -364,16 +452,33 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
-        const links = document.querySelectorAll('.nav-links li');
+        const links = document.querySelectorAll('.nav-links li a'); 
 
+        // Função para abrir/fechar o menu
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            hamburger.classList.toggle('toggle');
+            hamburger.classList.toggle('active');
         });
 
+        // Fecha o menu ao clicar em um link
         links.forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+
+        // O script para aplicar o link WhatsApp foi movido para o topo do <script> acima para garantir que seja executado ao carregar.
+        const whatsappNumber = "554298633284";
+        const whatsappMessage = encodeURIComponent("Olá, gostaria de solicitar um orçamento para um site profissional. Vi a aliTech no seu site.");
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Aplica o link em todos os elementos com o atributo 'data-whatsapp-cta'
+            document.querySelectorAll('[data-whatsapp-cta]').forEach(link => {
+                link.setAttribute('href', whatsappLink);
             });
         });
     </script>
