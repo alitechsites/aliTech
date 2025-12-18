@@ -22,6 +22,7 @@
             --bg-light: #f1f5f9;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
+            --gold: #f59e0b; /* Cor para o prêmio */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -92,12 +93,68 @@
         .section-padding { padding: 100px 0; }
         
         /* Sobre */
-        .about-content { display: flex; align-items: center; gap: 60px; }
+        .about-content { display: flex; align-items: center; gap: 60px; margin-bottom: 60px; }
         .about-img { flex: 1; }
         .about-img img { border-radius: 12px; height: 400px; object-fit: cover; width: 100%; }
         .about-text { flex: 1; }
         .subtitle { color: var(--primary-color); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 10px; display: block; }
         .about-text h2 { font-size: 2.2rem; margin-bottom: 20px; }
+
+        /* --- NOVO CSS: PERFIL DO DESENVOLVEDOR --- */
+        .dev-card {
+            background-color: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        /* Detalhe decorativo no topo do card */
+        .dev-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--gold));
+        }
+
+        .dev-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .dev-info { flex: 2; }
+        .dev-info h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--secondary-color); }
+        .dev-info p { font-size: 1rem; color: var(--text-color); margin-bottom: 20px; }
+        
+        .highlight-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #fffbeb; /* Fundo amarelado suave */
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        .highlight-box i { color: var(--gold); font-size: 1.5rem; }
+        .highlight-box strong { color: #92400e; }
+
+        .tech-stack { flex: 1; min-width: 250px; }
+        .tech-stack h4 { margin-bottom: 15px; font-size: 1.1rem; }
+        .tech-icons { display: flex; gap: 20px; flex-wrap: wrap; }
+        .tech-icons i {
+            font-size: 2.5rem;
+            color: #64748b;
+            transition: var(--transition);
+        }
+        .tech-icons i:hover { color: var(--primary-color); transform: scale(1.1); }
+
 
         /* Serviços */
         .services { background-color: var(--bg-light); }
@@ -203,6 +260,8 @@
             .hero-img, .about-img { order: -1; }
             .hero-text h1 { font-size: 2.5rem; }
             .about-img img { height: 350px; }
+            .dev-content { flex-direction: column; align-items: flex-start; }
+            .tech-stack { margin-top: 20px; }
         }
         @media (max-width: 768px) {
             .nav-links { 
@@ -229,6 +288,10 @@
             .hero { padding: 120px 0 60px; }
             .section-padding { padding: 60px 0; }
             .whatsapp-cta-box { flex: none; width: 100%; }
+            
+            .dev-content { text-align: center; justify-content: center; align-items: center; }
+            .tech-icons { justify-content: center; }
+            .highlight-box { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -276,17 +339,51 @@
     </section>
 
     <section class="section-padding" id="sobre">
-        <div class="container about-content">
-            <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop" alt="Equipe de desenvolvedores em reunião e planejamento">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470&auto=format&fit=crop" alt="Equipe de desenvolvedores em reunião e planejamento">
+                </div>
+                <div class="about-text">
+                    <span class="subtitle">Sobre a aliTech</span>
+                    <h2>Seu Parceiro de Desenvolvimento Web em Inácio Martins, PR</h2>
+                    <p>A aliTech é uma empresa de Inácio Martins - PR com um propósito claro: ajudar empresas a se posicionarem com autoridade na internet.</p>
+                    <p>Nosso foco é entregar soluções personalizadas, rápidas e seguras. Combinamos design estratégico com tecnologia de ponta para garantir que seu site trabalhe por você 24 horas por dia.</p>
+                    <a href="#servicos" class="btn btn-outline">Conheça nossos serviços</a>
+                </div>
             </div>
-            <div class="about-text">
-                <span class="subtitle">Sobre a aliTech</span>
-                <h2>Seu Parceiro de Desenvolvimento Web em Inácio Martins, PR</h2>
-                <p>A aliTech é uma empresa de Inácio Martins - PR com um propósito claro: ajudar empresas a se posicionarem com autoridade na internet.</p>
-                <p>Nosso foco é entregar soluções personalizadas, rápidas e seguras. Combinamos design estratégico com tecnologia de ponta para garantir que seu site trabalhe por você 24 horas por dia.</p>
-                <a href="#servicos" class="btn btn-outline">Conheça nossos serviços</a>
+
+            <div class="dev-card">
+                <div class="dev-content">
+                    <div class="dev-info">
+                        <h3>Quem faz acontecer</h3>
+                        <p>
+                            Olá! Meu nome é <strong>Álisson</strong>. Tenho <strong>15 anos</strong> e sou um apaixonado por tecnologia. 
+                            Apesar da pouca idade, já possuo <strong>um ano de experiência</strong> criando sites e soluções digitais, 
+                            transformando ideias em código funcional e eficiente.
+                        </p>
+                        
+                        <div class="highlight-box">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <span>Vencedor do</span><br>
+                                <strong>Agrinho de Programação 2025</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h4>Tecnologias que domino:</h4>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-git-alt" title="Git"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -470,7 +567,6 @@
             });
         });
 
-        // O script para aplicar o link WhatsApp foi movido para o topo do <script> acima para garantir que seja executado ao carregar.
         const whatsappNumber = "554298633284";
         const whatsappMessage = encodeURIComponent("Olá, gostaria de solicitar um orçamento para um site profissional. Vi a aliTech no seu site.");
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
