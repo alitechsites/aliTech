@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Criação de Sites Profissionais. Sites rápidos, responsivos e otimizados (SEO) para gerar mais vendas para o seu negócio.">
+    <meta name="author" content="aliTech - Álisson">
     <title>aliTech | Criação de Sites Profissionais</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* OTIMIZAÇÃO: Fontes importadas no CSS para reduzir requisições no head */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap');
-
         /* --- VARIÁVEIS E RESET --- */
         :root {
             --primary-color: #2563eb; /* Azul Vibrante */
@@ -22,7 +24,8 @@
             --bg-light: #f1f5f9;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
-            --gold: #f59e0b; /* Cor para o prêmio */
+            --gold: #f59e0b;
+            --whatsapp-green: #25d366;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -75,7 +78,7 @@
         .nav-links { display: flex; gap: 30px; align-items: center; }
         .nav-links a { font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
         .nav-links a:hover { color: var(--primary-color); }
-        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; transition: var(--transition); }
+        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; transition: var(--transition); color: var(--secondary-color); }
 
         /* --- HERO --- */
         .hero {
@@ -96,10 +99,10 @@
         .about-content { display: flex; align-items: center; gap: 60px; margin-bottom: 60px; }
         .about-img { flex: 1; }
         
-        /* NOVO CSS PARA O VÍDEO RESPONSIVO */
+        /* VÍDEO RESPONSIVO */
         .video-responsive {
             position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
+            padding-bottom: 56.25%; /* 16:9 */
             height: 0;
             overflow: hidden;
             border-radius: 12px;
@@ -119,7 +122,7 @@
         .subtitle { color: var(--primary-color); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 10px; display: block; }
         .about-text h2 { font-size: 2.2rem; margin-bottom: 20px; }
 
-        /* --- CSS: PERFIL DO DESENVOLVEDOR --- */
+        /* --- PERFIL DO DESENVOLVEDOR --- */
         .dev-card {
             background-color: var(--white);
             border: 1px solid #e2e8f0;
@@ -130,7 +133,6 @@
             position: relative;
             overflow: hidden;
         }
-        /* Detalhe decorativo no topo do card */
         .dev-card::before {
             content: '';
             position: absolute;
@@ -156,7 +158,7 @@
             display: inline-flex;
             align-items: center;
             gap: 15px;
-            background-color: #fffbeb; /* Fundo amarelado suave */
+            background-color: #fffbeb;
             padding: 15px 20px;
             border-radius: 8px;
             border-left: 4px solid var(--gold);
@@ -240,7 +242,7 @@
         }
         /* Botão de WhatsApp */
         .btn-whatsapp {
-            background-color: #25d366; 
+            background-color: var(--whatsapp-green); 
             color: white;
             padding: 15px 30px;
             font-size: 1.1rem;
@@ -255,6 +257,29 @@
             transform: translateY(-2px);
         }
 
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
 
         /* Footer */
         footer { background-color: #020617; color: #94a3b8; padding: 60px 0 20px; }
@@ -294,14 +319,16 @@
                 box-shadow: 0 10px 10px rgba(0,0,0,0.1); 
                 transition: right 0.3s ease-in-out; 
                 z-index: 999;
-                height: 100vh;
+                height: calc(100vh - 70px);
+                justify-content: flex-start;
+                padding-top: 50px;
             }
             .nav-links.active { right: 0; }
-            .nav-links li { width: 100%; text-align: center; margin: 10px 0; }
+            .nav-links li { width: 100%; text-align: center; margin: 15px 0; }
             .nav-links a.btn { margin-top: 20px; width: 80%; }
             .hamburger { display: block; }
             .hamburger.active i::before {
-                content: "\f00d";
+                content: "\f00d"; /* Ícone de fechar */
             }
             .contact-container { flex-direction: column; }
             .hero { padding: 120px 0 60px; }
@@ -311,22 +338,13 @@
             .dev-content { text-align: center; justify-content: center; align-items: center; }
             .tech-icons { justify-content: center; }
             .highlight-box { width: 100%; justify-content: center; }
+            
+            /* Ajuste para o botão flutuante não atrapalhar */
+            .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 20px; right: 20px; }
         }
     </style>
 </head>
 <body>
-
-    <script>
-        const whatsappNumber = "554298633284";
-        const whatsappMessage = encodeURIComponent("Olá, gostaria de solicitar um orçamento para um site profissional. Vi a aliTech no seu site.");
-        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('a[data-whatsapp-cta]').forEach(link => {
-                link.setAttribute('href', whatsappLink);
-            });
-        });
-    </script>
 
     <header>
         <div class="container nav-container">
@@ -362,7 +380,7 @@
             <div class="about-content">
                 <div class="about-img">
                     <div class="video-responsive">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VSLpBSM4wu8?si=PXtfcZKvoLHgGYNK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/VSLpBSM4wu8?si=PXtfcZKvoLHgGYNK" title="Vídeo de Apresentação" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="about-text">
@@ -508,7 +526,7 @@
                         <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         <div>
                             <h4>WhatsApp</h4>
-                            <p><a href="#" data-whatsapp-cta target="_blank">+55 (42) 9863-3284</a></p>
+                            <p><a href="#" data-whatsapp-cta target="_blank" rel="noopener noreferrer">+55 (42) 9863-3284</a></p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -539,14 +557,14 @@
                     <p style="font-size: 0.9rem;">Desenvolvimento de sites profissionais com foco em velocidade, conversão e SEO.</p>
 
                     <div class="social-links">
-                        <a href="https://wa.me/554298633284" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://instagram.com/alitech_sites" target="_blank" aria-label="Instagram da aliTech"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/554298633284" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/alitech_sites" target="_blank" rel="noopener noreferrer" aria-label="Instagram da aliTech"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
                     <h4>Contato Direto</h4>
                     <ul>
-                        <li><i class="fab fa-whatsapp"></i> <a href="#" data-whatsapp-cta target="_blank">(42) 9863-3284</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="#" data-whatsapp-cta target="_blank" rel="noopener noreferrer">(42) 9863-3284</a></li>
                         <li><i class="far fa-envelope"></i> alitech.sites.im@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Inácio Martins, PR</li>
                     </ul>
@@ -566,6 +584,10 @@
             </div>
         </div>
     </footer>
+
+    <a href="#" class="whatsapp-float" data-whatsapp-cta target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         const hamburger = document.getElementById('hamburger');
@@ -588,6 +610,7 @@
             });
         });
 
+        // Configuração Centralizada do WhatsApp
         const whatsappNumber = "554298633284";
         const whatsappMessage = encodeURIComponent("Olá, gostaria de solicitar um orçamento para um site profissional. Vi a aliTech no seu site.");
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
