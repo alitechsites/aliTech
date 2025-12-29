@@ -1,626 +1,626 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Criação de Sites Profissionais. Sites rápidos, responsivos e otimizados (SEO) para gerar mais vendas para o seu negócio.">
-    <meta name="author" content="aliTech - Álisson">
-    <title>aliTech | Criação de Sites Profissionais</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Criação de Sites Profissionais. Sites rápidos, responsivos e otimizados (SEO) para gerar mais vendas para o seu negócio.">
+    <meta name="author" content="aliTech - Álisson">
+    <title>aliTech | Criação de Sites Profissionais</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        /* --- VARIÁVEIS E RESET --- */
-        :root {
-            --primary-color: #2563eb; /* Azul Vibrante */
-            --primary-dark: #1e40af;
-            --secondary-color: #0f172a; /* Azul Quase Preto */
-            --text-color: #334155;
-            --white: #ffffff;
-            --bg-light: #f1f5f9;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-            --gold: #f59e0b;
-            --whatsapp-green: #25d366;
-        }
+    <style>
+        /* --- VARIÁVEIS E RESET --- */
+        :root {
+            --primary-color: #2563eb; /* Azul Vibrante */
+            --primary-dark: #1e40af;
+            --secondary-color: #0f172a; /* Azul Quase Preto */
+            --text-color: #334155;
+            --white: #ffffff;
+            --bg-light: #f1f5f9;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --gold: #f59e0b;
+            --whatsapp-green: #25d366;
+        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; color: var(--text-color); line-height: 1.6; background-color: var(--white); }
-        
-        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary-color); }
-        ul { list-style: none; }
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; height: auto; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-color); line-height: 1.6; background-color: var(--white); }
+        
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--secondary-color); }
+        ul { list-style: none; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; height: auto; }
 
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-color);
-            color: var(--white);
-            border-radius: 8px;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-        }
-        .btn:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-        .btn-outline:hover { background-color: var(--primary-color); color: var(--white); transform: translateY(-2px); }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .btn:hover { background-color: var(--primary-dark); transform: translateY(-2px); }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        .btn-outline:hover { background-color: var(--primary-color); color: var(--white); transform: translateY(-2px); }
 
-        /* --- HEADER --- */
-        header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 0;
-        }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); }
-        .logo span { color: var(--primary-color); }
-        
-        .nav-links { display: flex; gap: 30px; align-items: center; }
-        .nav-links a { font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
-        .nav-links a:hover { color: var(--primary-color); }
-        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; transition: var(--transition); color: var(--secondary-color); }
+        /* --- HEADER --- */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); }
+        .logo span { color: var(--primary-color); }
+        
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary-color); }
+        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; transition: var(--transition); color: var(--secondary-color); }
 
-        /* --- HERO --- */
-        .hero {
-            padding: 160px 0 100px;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        .hero-content { display: flex; align-items: center; gap: 50px; }
-        .hero-text { flex: 1; }
-        .hero-text h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
-        .hero-text p { font-size: 1.1rem; margin-bottom: 30px; color: #64748b; }
-        .hero-img { flex: 1; }
-        .hero-img img { border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        /* --- HERO --- */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .hero-content { display: flex; align-items: center; gap: 50px; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
+        .hero-text p { font-size: 1.1rem; margin-bottom: 30px; color: #64748b; }
+        .hero-img { flex: 1; }
+        .hero-img img { border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
 
-        /* --- SECTIONS --- */
-        .section-padding { padding: 100px 0; }
-        
-        /* Sobre */
-        .about-content { display: flex; align-items: center; gap: 60px; margin-bottom: 60px; }
-        .about-img { flex: 1; }
-        
-        /* VÍDEO RESPONSIVO */
-        .video-responsive {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            background: #000;
-        }
-        .video-responsive iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+        /* --- SECTIONS --- */
+        .section-padding { padding: 100px 0; }
+        
+        /* Sobre */
+        .about-content { display: flex; align-items: center; gap: 60px; margin-bottom: 60px; }
+        .about-img { flex: 1; }
+        
+        /* VÍDEO RESPONSIVO */
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            background: #000;
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
-        .about-text { flex: 1; }
-        .subtitle { color: var(--primary-color); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 10px; display: block; }
-        .about-text h2 { font-size: 2.2rem; margin-bottom: 20px; }
+        .about-text { flex: 1; }
+        .subtitle { color: var(--primary-color); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 10px; display: block; }
+        .about-text h2 { font-size: 2.2rem; margin-bottom: 20px; }
 
-        /* --- PERFIL DO DESENVOLVEDOR --- */
-        .dev-card {
-            background-color: var(--white);
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 40px;
-            margin-top: 40px;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-        .dev-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary-color), var(--gold));
-        }
+        /* --- PERFIL DO DESENVOLVEDOR --- */
+        .dev-card {
+            background-color: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .dev-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--gold));
+        }
 
-        .dev-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
+        .dev-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
 
-        .dev-info { flex: 2; }
-        .dev-info h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--secondary-color); }
-        .dev-info p { font-size: 1rem; color: var(--text-color); margin-bottom: 20px; }
-        
-        .highlight-box {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            background-color: #fffbeb;
-            padding: 15px 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--gold);
-        }
-        .highlight-box i { color: var(--gold); font-size: 1.5rem; }
-        .highlight-box strong { color: #92400e; }
+        .dev-info { flex: 2; }
+        .dev-info h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--secondary-color); }
+        .dev-info p { font-size: 1rem; color: var(--text-color); margin-bottom: 20px; }
+        
+        .highlight-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #fffbeb;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        .highlight-box i { color: var(--gold); font-size: 1.5rem; }
+        .highlight-box strong { color: #92400e; }
 
-        .tech-stack { flex: 1; min-width: 250px; }
-        .tech-stack h4 { margin-bottom: 15px; font-size: 1.1rem; }
-        .tech-icons { display: flex; gap: 20px; flex-wrap: wrap; }
-        .tech-icons i {
-            font-size: 2.5rem;
-            color: #64748b;
-            transition: var(--transition);
-        }
-        .tech-icons i:hover { color: var(--primary-color); transform: scale(1.1); }
-
-
-        /* Serviços */
-        .services { background-color: var(--bg-light); }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { 
-            background: var(--white); 
-            padding: 40px; 
-            border-radius: 12px; 
-            transition: var(--transition); 
-            border-bottom: 3px solid transparent; 
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-bottom: 3px solid var(--primary-color); }
-        .service-icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; }
-
-        /* Diferenciais */
-        .diferenciais-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .diff-item i { 
-            background: rgba(37, 99, 235, 0.1); 
-            color: var(--primary-color); 
-            width: 50px; 
-            height: 50px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50%; 
-            margin-bottom: 15px; 
-            font-size: 1.2rem; 
-        }
-
-        /* CTA */
-        .cta-section { background-color: var(--secondary-color); color: var(--white); text-align: center; padding: 80px 0; }
-        .cta-section h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 20px; }
-        .cta-section .btn:hover {
-            background-color: var(--bg-light) !important;
-            color: var(--primary-dark) !important;
-        }
-
-        /* Contato */
-        .contact-container { 
-            display: flex; 
-            gap: 50px; 
-            align-items: flex-start; 
-        }
-        .contact-info { flex: 1; }
-        .info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
-        .info-item i { font-size: 1.2rem; color: var(--primary-color); }
-        .info-item h4 { margin: 0; font-weight: 600; font-size: 1rem; }
-        .info-item p { margin: 0; font-size: 0.95rem; }
-
-        .whatsapp-cta-box { 
-            flex: 1.5; 
-            background: var(--bg-light); 
-            padding: 40px; 
-            border-radius: 12px; 
-            text-align: center;
-        }
-        .whatsapp-cta-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--primary-dark);
-        }
-        /* Botão de WhatsApp */
-        .btn-whatsapp {
-            background-color: var(--whatsapp-green); 
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-        }
-        .btn-whatsapp:hover {
-            background-color: #128c7e; 
-            transform: translateY(-2px);
-        }
-
-        /* Botão Flutuante WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--whatsapp-green);
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        .whatsapp-float:hover {
-            background-color: #128c7e;
-            transform: scale(1.1);
-        }
-
-        /* Footer */
-        footer { background-color: #020617; color: #94a3b8; padding: 60px 0 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #1e293b; padding-bottom: 40px; }
-        .footer-col h4 { color: var(--white); margin-bottom: 20px; }
-        .footer-col ul li { margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;}
-        .footer-col ul li i { color: var(--primary-color); }
-        .copyright { text-align: center; font-size: 0.85rem; padding-top: 20px; }
-
-        .social-links { margin-top: 15px; display: flex; gap: 15px; }
-        .social-links a { 
-            font-size: 1.5rem; 
-            color: var(--white); 
-            transition: var(--transition); 
-        }
-        .social-links a:hover { color: var(--primary-color); }
+        .tech-stack { flex: 1; min-width: 250px; }
+        .tech-stack h4 { margin-bottom: 15px; font-size: 1.1rem; }
+        .tech-icons { display: flex; gap: 20px; flex-wrap: wrap; }
+        .tech-icons i {
+            font-size: 2.5rem;
+            color: #64748b;
+            transition: var(--transition);
+        }
+        .tech-icons i:hover { color: var(--primary-color); transform: scale(1.1); }
 
 
-        /* Responsivo */
-        @media (max-width: 992px) {
-            .hero-content, .about-content { flex-direction: column; text-align: center; }
-            .hero-img, .about-img { order: -1; width: 100%; }
-            .hero-text h1 { font-size: 2.5rem; }
-            .about-img img { height: 350px; }
-            .dev-content { flex-direction: column; align-items: flex-start; }
-            .tech-stack { margin-top: 20px; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { 
-                position: fixed; 
-                top: 70px; 
-                right: -100%; 
-                background: var(--white); 
-                width: 100%; 
-                flex-direction: column; 
-                padding: 30px; 
-                box-shadow: 0 10px 10px rgba(0,0,0,0.1); 
-                transition: right 0.3s ease-in-out; 
-                z-index: 999;
-                height: calc(100vh - 70px);
-                justify-content: flex-start;
-                padding-top: 50px;
-            }
-            .nav-links.active { right: 0; }
-            .nav-links li { width: 100%; text-align: center; margin: 15px 0; }
-            .nav-links a.btn { margin-top: 20px; width: 80%; }
-            .hamburger { display: block; }
-            .hamburger.active i::before {
-                content: "\f00d"; /* Ícone de fechar */
-            }
-            .contact-container { flex-direction: column; }
-            .hero { padding: 120px 0 60px; }
-            .section-padding { padding: 60px 0; }
-            .whatsapp-cta-box { flex: none; width: 100%; }
-            
-            .dev-content { text-align: center; justify-content: center; align-items: center; }
-            .tech-icons { justify-content: center; }
-            .highlight-box { width: 100%; justify-content: center; }
-            
-            /* Ajuste para o botão flutuante não atrapalhar */
-            .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 20px; right: 20px; }
-        }
-    </style>
+        /* Serviços */
+        .services { background-color: var(--bg-light); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { 
+            background: var(--white); 
+            padding: 40px; 
+            border-radius: 12px; 
+            transition: var(--transition); 
+            border-bottom: 3px solid transparent; 
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-bottom: 3px solid var(--primary-color); }
+        .service-icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; }
+
+        /* Diferenciais */
+        .diferenciais-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .diff-item i { 
+            background: rgba(37, 99, 235, 0.1); 
+            color: var(--primary-color); 
+            width: 50px; 
+            height: 50px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            margin-bottom: 15px; 
+            font-size: 1.2rem; 
+        }
+
+        /* CTA */
+        .cta-section { background-color: var(--secondary-color); color: var(--white); text-align: center; padding: 80px 0; }
+        .cta-section h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-section .btn:hover {
+            background-color: var(--bg-light) !important;
+            color: var(--primary-dark) !important;
+        }
+
+        /* Contato */
+        .contact-container { 
+            display: flex; 
+            gap: 50px; 
+            align-items: flex-start; 
+        }
+        .contact-info { flex: 1; }
+        .info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .info-item i { font-size: 1.2rem; color: var(--primary-color); }
+        .info-item h4 { margin: 0; font-weight: 600; font-size: 1rem; }
+        .info-item p { margin: 0; font-size: 0.95rem; }
+
+        .whatsapp-cta-box { 
+            flex: 1.5; 
+            background: var(--bg-light); 
+            padding: 40px; 
+            border-radius: 12px; 
+            text-align: center;
+        }
+        .whatsapp-cta-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        /* Botão de WhatsApp */
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green); 
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e; 
+            transform: translateY(-2px);
+        }
+
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer { background-color: #020617; color: #94a3b8; padding: 60px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #1e293b; padding-bottom: 40px; }
+        .footer-col h4 { color: var(--white); margin-bottom: 20px; }
+        .footer-col ul li { margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;}
+        .footer-col ul li i { color: var(--primary-color); }
+        .copyright { text-align: center; font-size: 0.85rem; padding-top: 20px; }
+
+        .social-links { margin-top: 15px; display: flex; gap: 15px; }
+        .social-links a { 
+            font-size: 1.5rem; 
+            color: var(--white); 
+            transition: var(--transition); 
+        }
+        .social-links a:hover { color: var(--primary-color); }
+
+
+        /* Responsivo */
+        @media (max-width: 992px) {
+            .hero-content, .about-content { flex-direction: column; text-align: center; }
+            .hero-img, .about-img { order: -1; width: 100%; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .about-img img { height: 350px; }
+            .dev-content { flex-direction: column; align-items: flex-start; }
+            .tech-stack { margin-top: 20px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { 
+                position: fixed; 
+                top: 70px; 
+                right: -100%; 
+                background: var(--white); 
+                width: 100%; 
+                flex-direction: column; 
+                padding: 30px; 
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1); 
+                transition: right 0.3s ease-in-out; 
+                z-index: 999;
+                height: calc(100vh - 70px);
+                justify-content: flex-start;
+                padding-top: 50px;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links li { width: 100%; text-align: center; margin: 15px 0; }
+            .nav-links a.btn { margin-top: 20px; width: 80%; }
+            .hamburger { display: block; }
+            .hamburger.active i::before {
+                content: "\f00d"; /* Ícone de fechar */
+            }
+            .contact-container { flex-direction: column; }
+            .hero { padding: 120px 0 60px; }
+            .section-padding { padding: 60px 0; }
+            .whatsapp-cta-box { flex: none; width: 100%; }
+            
+            .dev-content { text-align: center; justify-content: center; align-items: center; }
+            .tech-icons { justify-content: center; }
+            .highlight-box { width: 100%; justify-content: center; }
+            
+            /* Ajuste para o botão flutuante não atrapalhar */
+            .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 20px; right: 20px; }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <a href="#inicio" class="logo">ali<span>Tech</span></a>
-            <div class="hamburger" id="hamburger" aria-label="Abrir menu de navegação"><i class="fas fa-bars"></i></div>
-            <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#diferenciais">Diferenciais</a></li>
-                    <li><a href="#" class="btn" data-whatsapp-cta>Solicitar Orçamento</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header>
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">ali<span>Tech</span></a>
+            <div class="hamburger" id="hamburger" aria-label="Abrir menu de navegação"><i class="fas fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#" class="btn" data-whatsapp-cta>Solicitar Orçamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <section class="hero" id="inicio">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Criação de Sites Profissionais que Geram Resultados</h1>
-                <p>A aliTech desenvolve sites modernos, rápidos e otimizados para empresas que querem vender mais.</p>
-                <a href="#" class="btn" data-whatsapp-cta>Quero meu site profissional</a>
-            </div>
-            <div class="hero-img">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop" alt="Pessoa trabalhando em desenvolvimento web em um notebook">
-            </div>
-        </div>
-    </section>
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Criação de Sites Profissionais que Geram Resultados</h1>
+                <p>A aliTech desenvolve sites modernos, rápidos e otimizados para empresas que querem vender mais.</p>
+                <a href="#" class="btn" data-whatsapp-cta>Quero meu site profissional</a>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop" alt="Pessoa trabalhando em desenvolvimento web em um notebook">
+            </div>
+        </div>
+    </section>
 
-    <section class="section-padding" id="sobre">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-img">
-                    <div class="video-responsive">
-                        <iframe src="https://www.youtube.com/embed/VSLpBSM4wu8?si=PXtfcZKvoLHgGYNK" title="Vídeo de Apresentação" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <span class="subtitle">Sobre a aliTech</span>
-                    <h2>Seu Parceiro de Desenvolvimento Web</h2>
-                    <p>A aliTech é uma empresa com um propósito claro: ajudar empresas a se posicionarem com autoridade na internet.</p>
-                    <p>Nosso foco é entregar soluções personalizadas, rápidas e seguras. Combinamos design estratégico com tecnologia de ponta para garantir que seu site trabalhe por você 24 horas por dia.</p>
-                    <a href="#servicos" class="btn btn-outline">Conheça nossos serviços</a>
-                </div>
-            </div>
+    <section class="section-padding" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <div class="video-responsive">
+                        <iframe src="https://www.youtube.com/embed/VSLpBSM4wu8?si=PXtfcZKvoLHgGYNK" title="Vídeo de Apresentação" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="subtitle">Sobre a aliTech</span>
+                    <h2>Seu Parceiro de Desenvolvimento Web</h2>
+                    <p>A aliTech é uma empresa com um propósito claro: ajudar empresas a se posicionarem com autoridade na internet.</p>
+                    <p>Nosso foco é entregar soluções personalizadas, rápidas e seguras. Combinamos design estratégico com tecnologia de ponta para garantir que seu site trabalhe por você 24 horas por dia.</p>
+                    <a href="#servicos" class="btn btn-outline">Conheça nossos serviços</a>
+                </div>
+            </div>
 
-            <div class="dev-card">
-                <div class="dev-content">
-                    <div class="dev-info">
-                        <h3>Quem faz acontecer</h3>
-                        <p>
-                            Olá! Meu nome é <strong>Álisson</strong>. Tenho <strong>15 anos</strong> e sou um apaixonado por tecnologia. 
-                            Apesar da pouca idade, já possuo <strong>um ano de experiência</strong> criando sites e soluções digitais, 
-                            transformando ideias em código funcional e eficiente.
-                        </p>
-                        
-                        <div class="highlight-box">
-                            <i class="fas fa-trophy"></i>
-                            <div>
-                                <span>Vencedor do</span><br>
-                                <strong>Agrinho de Programação 2025</strong>
-                            </div>
-                        </div>
-                    </div>
+            <div class="dev-card">
+                <div class="dev-content">
+                    <div class="dev-info">
+                        <h3>Quem faz acontecer</h3>
+                        <p>
+                            Olá! Meu nome é <strong>Álisson</strong>. Tenho <strong>15 anos</strong> e sou um apaixonado por tecnologia. 
+                            Apesar da pouca idade, já possuo <strong>um ano de experiência</strong> criando sites e soluções digitais, 
+                            transformando ideias em código funcional e eficiente.
+                        </p>
+                        
+                        <div class="highlight-box">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <span>Vencedor do</span><br>
+                                <strong>Agrinho de Programação 2025</strong>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="tech-stack">
-                        <h4>Tecnologias que domino:</h4>
-                        <div class="tech-icons">
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-css3-alt" title="CSS3"></i>
-                            <i class="fab fa-js" title="JavaScript"></i>
-                            <i class="fab fa-git-alt" title="Git"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <div class="tech-stack">
+                        <h4>Tecnologias que domino:</h4>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-git-alt" title="Git"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        </div>
-    </section>
+        </div>
+    </section>
 
-    <section class="section-padding services" id="servicos">
-        <div class="container">
-            <div class="section-header">
-                <span class="subtitle">O que fazemos</span>
-                <h2>Soluções Completas</h2>
-                <p>Nossa expertise em desenvolvimento web garante que você tenha a ferramenta certa para o seu objetivo de negócio.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon" aria-hidden="true"><i class="fas fa-desktop"></i></div>
-                    <h3>Sites Institucionais</h3>
-                    <p>Apresente sua empresa com credibilidade. Sites planejados para fortalecer sua marca e autoridade online.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" aria-hidden="true"><i class="fas fa-rocket"></i></div>
-                    <h3>Landing Pages</h3>
-                    <p>Páginas de alta conversão focadas em vendas, captura de leads e promoções específicas.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" aria-hidden="true"><i class="fas fa-store"></i></div>
-                    <h3>Lojas Virtuais (E-commerce)</h3>
-                    <p>E-commerces seguros e de fácil gerenciamento para você vender seus produtos online 24h por dia.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Sites Responsivos</h3>
-                    <p>Layouts que se adaptam perfeitamente a todos os dispositivos: celulares, tablets e computadores.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" aria-hidden="true"><i class="fas fa-search"></i></div>
-                    <h3>Otimização SEO</h3>
-                    <p>Estrutura e conteúdo otimizado para que seu negócio seja encontrado com facilidade no Google.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
-                    <h3>Manutenção e Suporte</h3>
-                    <p>Suporte técnico contínuo, atualizações de segurança e backups para manter seu site sempre no ar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="section-padding services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">O que fazemos</span>
+                <h2>Soluções Completas</h2>
+                <p>Nossa expertise em desenvolvimento web garante que você tenha a ferramenta certa para o seu objetivo de negócio.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-desktop"></i></div>
+                    <h3>Sites Institucionais</h3>
+                    <p>Apresente sua empresa com credibilidade. Sites planejados para fortalecer sua marca e autoridade online.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-rocket"></i></div>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas de alta conversão focadas em vendas, captura de leads e promoções específicas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-store"></i></div>
+                    <h3>Lojas Virtuais (E-commerce)</h3>
+                    <p>E-commerces seguros e de fácil gerenciamento para você vender seus produtos online 24h por dia.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Sites Responsivos</h3>
+                    <p>Layouts que se adaptam perfeitamente a todos os dispositivos: celulares, tablets e computadores.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-search"></i></div>
+                    <h3>Otimização SEO</h3>
+                    <p>Estrutura e conteúdo otimizado para que seu negócio seja encontrado com facilidade no Google.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                    <h3>Manutenção e Suporte</h3>
+                    <p>Suporte técnico contínuo, atualizações de segurança e backups para manter seu site sempre no ar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="section-padding" id="diferenciais">
-        <div class="container">
-            <div class="section-header">
-                <span class="subtitle">Nossos Pilares</span>
-                <h2>Por que escolher a aliTech?</h2>
-            </div>
-            <div class="diferenciais-grid">
-                <div class="diff-item">
-                    <i class="fas fa-paint-brush" aria-hidden="true"></i>
-                    <h4>Design Moderno</h4>
-                    <p>Visual alinhado às tendências de UX/UI para uma experiência agradável.</p>
-                </div>
-                <div class="diff-item">
-                    <i class="fas fa-bolt" aria-hidden="true"></i>
-                    <h4>Velocidade</h4>
-                    <p>Sites otimizados para carregar rápido, melhorando o ranqueamento e a experiência do usuário.</p>
-                </div>
-                <div class="diff-item">
-                    <i class="fas fa-code" aria-hidden="true"></i>
-                    <h4>Código Limpo e Seguro</h4>
-                    <p>Desenvolvimento profissional com as melhores práticas de mercado e segurança.</p>
-                </div>
-                <div class="diff-item">
-                    <i class="fas fa-headset" aria-hidden="true"></i>
-                    <h4>Suporte Humanizado</h4>
-                    <p>Atendimento próximo e dedicado, focado em entender sua necessidade e garantir sua satisfação.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="section-padding" id="diferenciais">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Nossos Pilares</span>
+                <h2>Por que escolher a aliTech?</h2>
+            </div>
+            <div class="diferenciais-grid">
+                <div class="diff-item">
+                    <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                    <h4>Design Moderno</h4>
+                    <p>Visual alinhado às tendências de UX/UI para uma experiência agradável.</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-bolt" aria-hidden="true"></i>
+                    <h4>Velocidade</h4>
+                    <p>Sites otimizados para carregar rápido, melhorando o ranqueamento e a experiência do usuário.</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <h4>Código Limpo e Seguro</h4>
+                    <p>Desenvolvimento profissional com as melhores práticas de mercado e segurança.</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-headset" aria-hidden="true"></i>
+                    <h4>Suporte Humanizado</h4>
+                    <p>Atendimento próximo e dedicado, focado em entender sua necessidade e garantir sua satisfação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Pronto para ter um site profissional?</h2>
-            <p>Não perca mais vendas para a concorrência. Vamos conversar sobre o seu projeto?</p>
-            <a href="#" class="btn" style="background-color: var(--white); color: var(--primary-color);" data-whatsapp-cta>Solicitar Orçamento</a>
-        </div>
-    </section>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para ter um site profissional?</h2>
+            <p>Não perca mais vendas para a concorrência. Vamos conversar sobre o seu projeto?</p>
+            <a href="#" class="btn" style="background-color: var(--white); color: var(--primary-color);" data-whatsapp-cta>Solicitar Orçamento</a>
+        </div>
+    </section>
 
-    <section class="section-padding" id="contato">
-        <div class="container">
-            <div class="section-header">
-                <h2>Entre em Contato</h2>
-                <p>Para solicitar um orçamento ou tirar dúvidas, clique no botão do WhatsApp abaixo.</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <div>
-                            <h4>E-mail</h4>
-                            <p><a href="mailto:alitech.sites.im@gmail.com">alitech.sites.im@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                        <div>
-                            <h4>WhatsApp</h4>
-                            <p><a href="#" data-whatsapp-cta target="_blank" rel="noopener noreferrer">+55 (42) 9863-3284</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                        <div>
-                            <h4>Localização</h4>
-                            <p>Inácio Martins - PR</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="whatsapp-cta-box">
-                    <h3>Atendimento Imediato</h3>
-                    <p style="margin-bottom: 25px;">Clique abaixo para iniciar uma conversa no WhatsApp e receber seu orçamento rapidamente.</p>
-                    <a href="#" class="btn btn-whatsapp" data-whatsapp-cta>
-                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="section-padding" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Para solicitar um orçamento ou tirar dúvidas, clique no botão do WhatsApp abaixo.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p><a href="mailto:alitech.sites.im@gmail.com">alitech.sites.im@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="#" data-whatsapp-cta target="_blank" rel="noopener noreferrer">+55 (42) 9863-3284</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Inácio Martins - PR</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-cta-box">
+                    <h3>Atendimento Imediato</h3>
+                    <p style="margin-bottom: 25px;">Clique abaixo para iniciar uma conversa no WhatsApp e receber seu orçamento rapidamente.</p>
+                    <a href="#" class="btn btn-whatsapp" data-whatsapp-cta>
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="#inicio" class="logo" style="color:white; margin-bottom:15px; display:block;">ali<span>Tech</span></a>
-                    <p style="font-size: 0.9rem;">Desenvolvimento de sites profissionais com foco em velocidade, conversão e SEO.</p>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#inicio" class="logo" style="color:white; margin-bottom:15px; display:block;">ali<span>Tech</span></a>
+                    <p style="font-size: 0.9rem;">Desenvolvimento de sites profissionais com foco em velocidade, conversão e SEO.</p>
 
-                    <div class="social-links">
-                        <a href="https://wa.me/554298633284" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://instagram.com/alitech_sites" target="_blank" rel="noopener noreferrer" aria-label="Instagram da aliTech"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Contato Direto</h4>
-                    <ul>
-                        <li><i class="fab fa-whatsapp"></i> <a href="#" data-whatsapp-cta target="_blank" rel="noopener noreferrer">(42) 9863-3284</a></li>
-                        <li><i class="far fa-envelope"></i> alitech.sites.im@gmail.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Inácio Martins, PR</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#" data-whatsapp-cta>Solicitar Orçamento</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 aliTech – Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+                    <div class="social-links">
+                        <a href="https://wa.me/554298633284" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/alitech_sites" target="_blank" rel="noopener noreferrer" aria-label="Instagram da aliTech"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato Direto</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> <a href="#" data-whatsapp-cta target="_blank" rel="noopener noreferrer">(42) 9863-3284</a></li>
+                        <li><i class="far fa-envelope"></i> alitech.sites.im@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Inácio Martins, PR</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#diferenciais">Diferenciais</a></li>
+                        <li><a href="#" data-whatsapp-cta>Solicitar Orçamento</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 aliTech – Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    <a href="#" class="whatsapp-float" data-whatsapp-cta target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="#" class="whatsapp-float" data-whatsapp-cta target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        const links = document.querySelectorAll('.nav-links li a'); 
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const links = document.querySelectorAll('.nav-links li a'); 
 
-        // Função para abrir/fechar o menu
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
+        // Função para abrir/fechar o menu
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
 
-        // Fecha o menu ao clicar em um link
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    hamburger.classList.remove('active');
-                }
-            });
-        });
+        // Fecha o menu ao clicar em um link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
 
-        // Configuração Centralizada do WhatsApp
-        const whatsappNumber = "554298633284";
-        const whatsappMessage = encodeURIComponent("Olá, gostaria de solicitar um orçamento para um site profissional. Vi a aliTech no seu site.");
-        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            // Aplica o link em todos os elementos com o atributo 'data-whatsapp-cta'
-            document.querySelectorAll('[data-whatsapp-cta]').forEach(link => {
-                link.setAttribute('href', whatsappLink);
-            });
-        });
-    </script>
+        // Configuração Centralizada do WhatsApp
+        const whatsappNumber = "554298633284";
+        const whatsappMessage = encodeURIComponent("Olá, gostaria de solicitar um orçamento para um site profissional. Vi a aliTech no seu site.");
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Aplica o link em todos os elementos com o atributo 'data-whatsapp-cta'
+            document.querySelectorAll('[data-whatsapp-cta]').forEach(link => {
+                link.setAttribute('href', whatsappLink);
+            });
+        });
+    </script>
 </body>
 </html>
