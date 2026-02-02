@@ -16,9 +16,9 @@
     <style>
         /* --- VARIÁVEIS E RESET --- */
         :root {
-            --primary-color: #2563eb; /* Azul Vibrante */
+            --primary-color: #2563eb; 
             --primary-dark: #1e40af;
-            --secondary-color: #0f172a; /* Azul Quase Preto */
+            --secondary-color: #0f172a; 
             --text-color: #334155;
             --white: #ffffff;
             --bg-light: #f1f5f9;
@@ -69,11 +69,16 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
+            padding: 10px 0; /* Diminuído levemente para acomodar a logo */
         }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 700; color: var(--secondary-color); }
-        .logo span { color: var(--primary-color); }
+        
+        /* AJUSTE DA LOGO */
+        .logo img { 
+            width: 150px; /* Altere este valor para aumentar ou diminuir a logo */
+            height: auto;
+            display: block;
+        }
         
         .nav-links { display: flex; gap: 30px; align-items: center; }
         .nav-links a { font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
@@ -348,7 +353,9 @@
 
     <header>
         <div class="container nav-container">
-            <a href="#inicio" class="logo">ali<span>Tech</span></a>
+            <a href="#inicio" class="logo">
+                <img src="https://i.imgur.com/39wH9fO.png" alt="Logo aliTech">
+            </a>
             <div class="hamburger" id="hamburger" aria-label="Abrir menu de navegação"><i class="fas fa-bars"></i></div>
             <nav>
                 <ul class="nav-links" id="nav-links">
@@ -553,7 +560,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#inicio" class="logo" style="color:white; margin-bottom:15px; display:block;">ali<span>Tech</span></a>
+                    <a href="#inicio" class="logo" style="margin-bottom:15px; display:block;">
+                        <img src="https://i.imgur.com/39wH9fO.png" alt="Logo aliTech">
+                    </a>
                     <p style="font-size: 0.9rem;">Desenvolvimento de sites profissionais com foco em velocidade, conversão e SEO.</p>
 
                     <div class="social-links">
